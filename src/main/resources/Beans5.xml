@@ -1,0 +1,13 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="test6" class="com.selflearning.spring.Test.Test6">
+    <property name = "name">
+        <list>
+     <value>Rahul</value>
+     <value>Mendiratta</value>
+        </list>
+    </property>
+    </bean>
+    </beans>
