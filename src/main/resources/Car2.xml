@@ -1,0 +1,13 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="car" class="com.selflearning.spring.Test.Car1">
+       <property name = "carName" value = "Audi"/>
+        <property name ="engine">
+        <bean class="com.selflearning.spring.Test.Engine1">
+            <property name = "engineName" value = "American Engine"/>
+        </bean>
+        </property>
+    </bean>
+</beans>
