@@ -29,6 +29,7 @@ public static void main(String... args){
     ApplicationContext applicationContext = new FileSystemXmlApplicationContext(file);
     Car1 car = (Car1)applicationContext.getBean("car");
     car.getCarInfo();
+
 }
 
 

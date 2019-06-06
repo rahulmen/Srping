@@ -2,8 +2,8 @@
         "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-    <bean id="test1" class="com.selflearning.spring.Test.Test1" scope="singleton">
-        <property name="subject" value="Spring">
+    <bean id="test1" class="com.selflearning.spring.Test.Test1">
+       <property name="subject" value="Spring">
         </property>
     </bean>
 </beans>

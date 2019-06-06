@@ -17,7 +17,7 @@ public class Client1 {
             Test1 t = (Test1) applicationContext1.getBean("test1");
             Test1 t1 = (Test1)applicationContext1.getBean("test1");
             //System.out.println("Subject Executed : "+t.getSubject());
-
+            System.out.println(t.subject);
 
         }
         }
