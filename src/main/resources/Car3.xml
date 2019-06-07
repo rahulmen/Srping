@@ -1,0 +1,18 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="car" class="com.selflearning.spring.Test.Car2">
+       <property name = "carName" value = "Audi"/>
+        <property name ="engine">
+            <list>
+            <bean class="com.selflearning.spring.Test.Engine1">
+                <property name = "engineName" value = "American Engine1"/>
+            </bean>
+            <bean class="com.selflearning.spring.Test.Engine1">
+                <property name = "engineName" value = "American Engine2"/>
+            </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

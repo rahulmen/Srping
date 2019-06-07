@@ -1,0 +1,22 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="collection" class="com.selflearning.spring.Test.CollectionDemo1">
+       <property name = "list1">
+           <list>
+           <value>DefaultArrayList</value>
+           </list>
+       </property>
+        <property name = "set1">
+            <set>
+            <value>DefaultLinkedHashSet</value>
+            </set>
+        </property>
+        <property name = "map1">
+            <map>
+                <entry key="DefaultMap" value="LinkedHashMap"/>
+            </map>
+        </property>
+    </bean>
+</beans>
