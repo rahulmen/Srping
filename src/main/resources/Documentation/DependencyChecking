@@ -1,0 +1,25 @@
+Two Types of DI :-
+
+1. Setter DI
+
+In Case of Setter DI it is not mandatory to pass value for each and every Property.
+
+2. Using Parameterise Constructor
+
+Dependency Checking
+======================
+
+But in Case of Constructor DI it is mandatory to pass value for each and every Constructor parameter.
+
+And to make Setter DI also mandatory we have one concept called dependency checking.
+
+AIM :- To make setter Setter DI also mandatory like Constructor DI.
+
+NOTE :- Support for Dependency Check is deprecated for Spring 4.0
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 package com.selflearning.spring.Test;
 
-public class Car2 {
+public class Car3 {
 
     private Engine1 engine;
 
@@ -15,8 +15,8 @@ public class Car2 {
     }
 
     public void getInfo(){
-        System.out.println("Name of the car "+carName);
-        System.out.println("Engine name is "+engine.getEngineName());
+        System.out.print(carName);
+        System.out.println(engine.getEngineName());
     }
 
 }

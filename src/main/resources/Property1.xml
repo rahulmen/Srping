@@ -1,0 +1,13 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="property" class="com.selflearning.spring.Test.PropertyDemo1">
+       <property name = "property">
+       <props>
+           <prop key="driver.class">oracle.jdbc.oracle</prop>
+        <prop key="user">RahulMendiratta</prop>
+       </props>
+       </property>
+       </bean>
+</beans>

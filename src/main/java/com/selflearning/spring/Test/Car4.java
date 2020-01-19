@@ -1,12 +1,12 @@
 package com.selflearning.spring.Test;
 
-public class Car2 {
+public class Car4 {
 
-    private Engine1 engine;
+    private Engine2 engine;
 
     private String carName;
 
-    public void setEngine(Engine1 engine) {
+    public void setEngine(Engine2 engine) {
         this.engine = engine;
     }
 
@@ -15,8 +15,8 @@ public class Car2 {
     }
 
     public void getInfo(){
-        System.out.println("Name of the car "+carName);
-        System.out.println("Engine name is "+engine.getEngineName());
+        System.out.print(carName);
+        System.out.println(engine.getEngineName());
     }
 
 }

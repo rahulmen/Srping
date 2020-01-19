@@ -1,0 +1,124 @@
+AIM :- Automatic Dependency Injection.(Auto DI).
+
+Limitation : Only we can inject Secondary types.
+
+Autowired Attribute :-
+1. byType(setter)
+2. byName(setter)
+3. constructor(constructor)
+4. autodetect(setter or constructor)
+5. no
+
+We have to applied this attribute at bean tag.
+
+If we want to apply autowiring for all the bean then better to apply it at beans root level tag.
+<beans default-autowired="byType">
+<bean/>
+</beans>
+
+
+1. byType(setter)
+
+<bean id ='c' class ="Car" autowired="byType"/>
+
+If we will apply byType at bean level. when we load xml document into IOC.IOC will read this document.
+
+If we apply autowired to any class in that class it will read all the document for that parameter if we get any setter
+parameter then that parameter is treated as dependent paramater.
+
+Then it will search for dependenct Type like Engine in this example in beans.xml and if it find any dependency Type also.
+Then it will be injected into Car Class bean.
+
+
+
+We can face abiuity problem if in beans.xml container it finds two tags with same Dependent type like
+
+
+<beans>
+<bean id ='c' class ="Car" autowired="byType"/>
+
+<bean id = "engine1" class = "Engine">
+<parameter name = "modelyear" value = "2019">
+</bean>
+
+<bean id = "engine2" class = "Engine">
+<parameter name = "modelyear" value = "2020">
+</bean>
+</beans>
+
+To resolve above problem :-
+
+<beans>
+<bean id ='c' class ="Car" autowired="byType"/>
+
+<bean id = "engine1" class = "Engine">
+<parameter name = "modelyear" value = "2019">
+</bean>
+
+<bean id = "engine2" class = "Engine" autowired-container="false">
+<parameter name = "modelyear" value = "2020">
+</bean>
+</beans>
+
+
+2. byName(setter)
+
+To overcome abiquity problem of byType Spring Introduced byName where dependent Type should ne matched and along with that
+Dependent Reference value should be same as Bean id.
+
+class Car{
+private Engine engine1;
+}
+
+<beans>
+<bean id ='c' class ="Car" autowired="byName"/>
+
+<bean id = "engine1" class = "Engine">
+<parameter name = "modelyear" value = "2019">
+</bean>
+
+<bean id = "engine2" class = "Engine">
+<parameter name = "modelyear" value = "2020">
+</bean>
+</beans>
+
+So in above example bean id engine 1 will be inserted.
+
+3. constructor(constructor)
+
+class Car{
+
+private Engine engine1;
+
+public Car(Engine engine1){
+this.engine1= engine1
+}}
+<beans>
+<bean id ='c' class ="Car" autowired="constructor"/>
+
+<bean id = "engine1" class = "Engine">
+<parameter name = "modelyear" value = "2019">
+</bean>
+
+<bean id = "engine2" class = "Engine">
+<parameter name = "modelyear" value = "2020">
+</bean>
+</beans>
+
+It will first check no of constructor in Car class then check type of dependency in that constructor then using Engine type
+if will check beans so it use byType mechanism.
+
+By default constructor used byType.
+
+
+
+
+
+
+
+
+
+
+
+
+

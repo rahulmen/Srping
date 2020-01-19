@@ -5,17 +5,20 @@
     <bean id="collection" class="com.selflearning.spring.Test.CollectionDemo1">
        <property name = "list1">
            <list>
-           <value>DefaultArrayList</value>
+           <value>DefaultArrayListIndex1</value>
+               <value>DefaultArrayListIndex2</value>
            </list>
        </property>
         <property name = "set1">
             <set>
-            <value>DefaultLinkedHashSet</value>
+            <value>DefaultLinkedHashSetIndex1</value>
+                <value>DefaultHashSetIndex2</value>
             </set>
         </property>
         <property name = "map1">
             <map>
-                <entry key="DefaultMap" value="LinkedHashMap"/>
+                <entry key="DefaultMapIndex1" value="LinkedHashMap1"/>
+                <entry key="DefaultMapIndex2" value = "LinkedHashMap2"/>
             </map>
         </property>
     </bean>

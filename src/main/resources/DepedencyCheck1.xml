@@ -1,0 +1,7 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean dependency-check="simple" id="dependencyCheck" class="com.selflearning.spring.Test.Car3" >
+    </bean>
+    </beans>
